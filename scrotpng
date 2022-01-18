@@ -1,0 +1,7 @@
+#! /bin/bash
+output='/home/cartilo/Pictures/Scrot/%Y-%m-%d-%T-ss.png'
+#clip='--exec 'xclip -selection clipboard -t image/jpg -i $f''
+
+scrot -e 'xclip -selection clipboard -t image/png -i $f' "$output" --select --line mode=edge
+
+#notify-send "Screenshot taken."
